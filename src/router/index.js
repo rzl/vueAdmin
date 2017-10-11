@@ -61,7 +61,7 @@ export const asyncRouterMap = [
     icon: 'zujian',
     noDropdown: true,
     children: [
-      { path: 'index', name: '人员管理', icon: 'zonghe', component: _import('page/form') }
+      { path: 'index', name: '人员管理', icon: 'zonghe', component: _import('peopleManage/index') }
     ]
   },
   {
