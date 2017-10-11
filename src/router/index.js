@@ -36,6 +36,44 @@ export default new Router({
 
 export const asyncRouterMap = [
   {
+    path: '/monthSign',
+    component: Layout,
+    icon: 'zujian',
+    noDropdown: true,
+    children: [
+      { path: 'index', name: '当月签到', icon: 'zonghe', component: _import('monthSign/index') }
+    ]
+  },
+  {
+    path: '/querySign',
+    component: Layout,
+    icon: 'zujian',
+    noDropdown: true,
+    children: [
+      { path: 'index', name: '签到查询', icon: 'zonghe', component: _import('page/form') },
+      { path: 'daySign/:day', name: '日期签到查询', icon: 'zonghe', component: _import('page/form') },
+      { path: 'timeSign/:startDay/:endDay', name: '时间段签到查询', icon: 'zonghe', component: _import('page/form') }
+    ]
+  },
+  {
+    path: '/peopleManage',
+    component: Layout,
+    icon: 'zujian',
+    noDropdown: true,
+    children: [
+      { path: 'index', name: '人员管理', icon: 'zonghe', component: _import('page/form') }
+    ]
+  },
+  {
+    path: '/setting',
+    component: Layout,
+    icon: 'zujian',
+    noDropdown: true,
+    children: [
+      { path: 'index', name: '设置', icon: 'zonghe', component: _import('page/form') }
+    ]
+  },
+  {
     path: '/example',
     component: Layout,
     redirect: 'noredirect',
@@ -55,5 +93,5 @@ export const asyncRouterMap = [
     children: [{ path: 'index', name: 'Table', component: _import('table/index'), meta: { role: ['admin'] }}]
   },
 
-  { path: '*', redirect: '/404', hidden: true }
+  //{ path: '*', redirect: '/404', hidden: true }
 ]
