@@ -115,7 +115,7 @@ export default {
         this.$router.push('restor');
       } else {
         // 点击的日期不是今天
-        this.$router.push('/querySign/daySign/'+date);
+        this.$router.push('/monthSign/daySign/'+date);
       }
       this.$store.commit('SET_CURDATE', date);
     },

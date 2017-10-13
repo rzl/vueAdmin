@@ -41,7 +41,8 @@ export const asyncRouterMap = [
     icon: 'zujian',
     noDropdown: true,
     children: [
-      { path: 'index', name: '当月签到', icon: 'zonghe', component: _import('monthSign/index') }
+      { path: 'index', name: '当月签到', icon: 'zonghe', component: _import('monthSign/index') },
+      { path: 'daySign/:day', name: '日期签到查询', icon: 'zonghe', component: _import('monthSign/daySign') }
     ]
   },
   {
@@ -50,9 +51,8 @@ export const asyncRouterMap = [
     icon: 'zujian',
     noDropdown: true,
     children: [
-      { path: 'index', name: '签到查询', icon: 'zonghe', component: _import('page/form') },
-      { path: 'daySign/:day', name: '日期签到查询', icon: 'zonghe', component: _import('page/form') },
-      { path: 'timeSign/:startDay/:endDay', name: '时间段签到查询', icon: 'zonghe', component: _import('page/form') }
+      { path: 'index', name: '签到查询', icon: 'zonghe', component: _import('querySign/index') },
+      { path: 'timeSign/:startDay/:endDay', name: '时间段签到查询', icon: 'zonghe', component: _import('querySign/result') }
     ]
   },
   {
@@ -61,7 +61,7 @@ export const asyncRouterMap = [
     icon: 'zujian',
     noDropdown: true,
     children: [
-      { path: 'index', name: '人员管理', icon: 'zonghe', component: _import('peopleManage/index') }
+      { path: 'index', name: '人员管理', icon: 'yonghuming', component: _import('peopleManage/index') },
     ]
   },
   {
@@ -70,10 +70,10 @@ export const asyncRouterMap = [
     icon: 'zujian',
     noDropdown: true,
     children: [
-      { path: 'index', name: '设置', icon: 'zonghe', component: _import('page/form') }
+      { path: 'index', name: '设置', icon: 'zonghe', component: _import('setting/index') }
     ]
   },
-  {
+ /* {
     path: '/example',
     component: Layout,
     redirect: 'noredirect',
@@ -91,7 +91,7 @@ export const asyncRouterMap = [
     icon: 'tubiao',
     noDropdown: true,
     children: [{ path: 'index', name: 'Table', component: _import('table/index'), meta: { role: ['admin'] }}]
-  },
+  },*/
 
   //{ path: '*', redirect: '/404', hidden: true }
 ]

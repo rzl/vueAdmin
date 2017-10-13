@@ -1,5 +1,10 @@
 <template>
   <div>
+      <a @click="back">
+        <el-menu-item index='0'>
+         &lt&lt&lt
+        </el-menu-item>
+      </a>
     <template v-for="item in routes">
       <router-link v-if="!item.hidden&&item.noDropdown&&item.children.length>0" :to="item.path+'/'+item.children[0].path">
         <el-menu-item :index="item.path+'/'+item.children[0].path">
@@ -30,8 +35,14 @@ export default {
     routes: {
       type: Array
     }
+  },
+  methods:{
+  back(){
+    this.$router.go(-1);
+  }
   }
 }
+
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
