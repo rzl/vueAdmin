@@ -59,18 +59,20 @@ export const asyncRouterMap = [
     path: '/peopleManage',
     component: Layout,
     icon: 'zujian',
-    noDropdown: true,
+    name: '人员管理',
     children: [
-      { path: 'index', name: '人员管理', icon: 'yonghuming', component: _import('peopleManage/index') },
+      { path: 'index', name: '用户管理', icon: 'zujian', component: _import('peopleManage/index') },
+      { path: 'index', name: '角色权限', icon: 'zujian', component: _import('peopleManage/index') },
+      { path: 'index', name: '注册申请', icon: 'zujian', component: _import('peopleManage/index') },
     ]
   },
   {
     path: '/setting',
     component: Layout,
     icon: 'zujian',
-    noDropdown: true,
+    name: '系统设置',
     children: [
-      { path: 'index', name: '设置', icon: 'zonghe', component: _import('setting/index') }
+      { path: 'index', name: '设置', icon: 'zujian', component: _import('setting/index') }
     ]
   },
  /* {
